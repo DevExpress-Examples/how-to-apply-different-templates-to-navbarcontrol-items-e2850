@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+    xmlns:local="clr-namespace:SilverlightApplication1">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxn:NavBarControl x:Name="navbar" HorizontalAlignment="Center" Width="300">
+            <dxn:NavBarControl.Resources>
+                <DataTemplate x:Key="RedContentTemplate">
+                    <TextBlock Text="{Binding Content}" Foreground="Red"/>
+                </DataTemplate>
+                <DataTemplate x:Key="GreenContentTemplate">
+                    <TextBlock Text="{Binding Content}" Foreground="Green"/>
+                </DataTemplate>
+                <DataTemplate x:Key="BlueContentTemplate">
+                    <TextBlock Text="{Binding Content}" Foreground="Blue"/>
+                </DataTemplate>
+            </dxn:NavBarControl.Resources>
+            <dxn:NavBarControl.Groups>
+                <dxn:NavBarGroup Header="Group1">
+                    <dxn:NavBarItem Content="Item Red"/>
+                    <dxn:NavBarItem Content="Item Green"/>
+                    <dxn:NavBarItem Content="Item Blue"/>
+                </dxn:NavBarGroup>
+            </dxn:NavBarControl.Groups>
+        </dxn:NavBarControl>
+    </Grid>
+</UserControl>
